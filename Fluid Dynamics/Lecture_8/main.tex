@@ -1,0 +1,277 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[a4paper, total={7in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Id}{Id}
+
+\newtheorem{remark}{Remark}
+
+
+\begin{document}
+
+\section {Second law of thermodynamics for viscous fluids}
+We have introduced the new variable $ s\:- $ entropy. Also we've got 
+Gibs-Duhems relation:
+
+$$
+    T\dfrac{Ds}{Dt} = \dfrac{De}{Dt} + p \dfrac{D}{Dt}
+    \left(\dfrac{1}{\rho}\right) \implies \dfrac{Ds}{Dt} =
+    \dfrac{r}{T}\quad\text{(using Euler equations)}
+$$
+
+From the first equation from Navier-Stokes equations, obtain:
+$$
+    \dfrac{De}{Dt} + p \dfrac{D}{Dt}
+    \left(\dfrac{1}{\rho}\right) = 
+    \dfrac{De}{Dt} - \dfrac{p}{\rho^2} \dfrac{D\rho}{Dt}
+$$
+
+\noindent\fcolorbox{green}{yellow}{%
+    \parbox{\textwidth}{%
+        $$
+            \dfrac{D}{Dt}f = (\partial_t + u\nabla )f =
+            \partial_t f + u\nabla f,\quad\text{f is scalar function}
+        $$
+        Consider $f = \dfrac{1}{\rho}$
+        $$
+            \partial\dfrac{1}{\rho} = -\dfrac{1}{\rho^2}\partial\rho
+        $$
+        $$
+            \partial_{x_i} = -\dfrac{1}{\rho^2}\partial_{x_i}\rho,\quad i = 1,2,3
+        $$
+        So,
+        $$
+            \dfrac{D}{Dt}\left(\dfrac{1}{\rho}\right) = 
+            -\dfrac{1}{\rho^2}\dfrac{D}{Dt}\rho
+        $$
+    }%
+    \newline
+}
+
+
+$$
+    \dfrac{De}{Dt} - \dfrac{p}{\rho^2} \dfrac{D\rho}{Dt} = 
+    \dfrac{De}{Dt} + \dfrac{p}{\rho}\:div\:u
+$$
+
+From the third equation from Navier-Stokes equations:
+$$
+    \dfrac{De}{Dt} + \dfrac{p}{\rho}\Div u = 
+    -\dfrac{p}{\rho}\Div u + \dfrac{p}{\rho}\:div\:u +
+    \dfrac{1}{\rho}\left(\kappa\Div(\nabla u) + 2\mu
+    \Tr(D^2) + \lambda(\Div u)^2 + \rho r\right)
+$$
+$$
+    = -\dfrac{\Div q}{\rho} + \dfrac{2\mu}{\rho}\Tr(D^2)+
+    \dfrac{\lambda}{\rho}(\Div u)^2 + r
+$$
+
+Multiply left and right side by $\rho$ and divide by $T$:
+$$
+    \rho\dfrac{Ds}{Dt} = -\dfrac{1}{T}\Div q + 
+    \dfrac{2\mu}{T}\Tr(D^2) + \dfrac{\lambda}{\mu}(\Div u)^2+
+    \dfrac{r\rho}{T}
+$$
+
+\noindent\fcolorbox{green}{yellow}{%
+    \parbox{\textwidth}{%
+        Observe
+        $$
+            -\dfrac{1}{T}\Div q = \dfrac{\kappa}{T}\Div(\nabla T)
+            = \kappa\Div\left(\dfrac{\nabla T}{T}\right) +
+            \kappa\dfrac{(\nabla  T)^2}{T^2}
+            = \Div\dfrac{q}{T} + \kappa\dfrac{(\nabla  T)^2}{T^2}
+        $$
+    }%
+    \newline
+}
+
+Hence, we can rewrite last equation:
+$$  
+    \rho\dfrac{Ds}{Dt} = -\Div\left(\dfrac{q}{T}\right) +
+    \dfrac{\rho r}{T} + \dfrac{1}{T}\left(2\mu\Tr(D^2) + 
+    \lambda(\Div u)^2 + \kappa(\nabla\sqrt{T})^2\right)
+$$
+
+\noindent\fcolorbox{green}{yellow}{%
+    \parbox{\textwidth}{%
+        $$
+            \partial_{x_i}\sqrt{T} = \partial_{x_i}(T^{\frac{1}{2}})
+            = \dfrac{1}{2}T^{-\frac{1}{2}}\partial_{x_i}T
+        $$
+        $$
+            \kappa(\nabla\sqrt{T}) = \dfrac{1}{2}\dfrac{1}{T^{\frac{1}{2}}}\nabla T
+        $$
+        $$
+            \kappa(\nabla\sqrt{T})^2 = \dfrac{1}{4}\dfrac{1}{T}(\nabla T)^2
+        $$
+    }%
+    \newline
+}
+
+Let us denote
+$$
+    \pi := \dfrac{1}{T}\left(2\mu\Tr(D^2) + 
+    \lambda(\Div u)^2 + \kappa(\nabla\sqrt{T})^2\right)
+$$
+$$
+    \rho\dfrac{Ds}{Dt} = -\Div\left(\dfrac{q}{T}\right) +
+    \dfrac{\rho r}{T} + \pi
+$$
+
+\noindent\fcolorbox{green}{yellow}{%
+    \parbox{\textwidth}{%
+        Observe $\pi \geq 0$
+    }%
+    \newline
+}
+
+$$
+    \rho\dfrac{Ds}{Dt} \geq -\Div\left(\dfrac{q}{T}\right) +
+    \dfrac{\rho r}{T}\quad\text{\textbf{Clausis-Duhem relation}}
+$$
+
+\begin{remark}
+    The entropy can not be constant
+\end{remark}
+
+\section{Incompressible Fluids}
+The volume for any quantity of fluid remains constant in time
+along the evoulution. That means, at time $t$
+$$
+    \vert A(t) \vert = \int_{A(t)} \,dx
+$$
+
+Thus, we can obtain
+$$
+    0 = \dfrac{d}{dt} \vert A(t) \vert = \dfrac{d}{dt}\int_{A(t)} \,dx
+    = \text{(by transport theorem)} = \int_{A(t)} \Div u\,dx \implies
+    \Div u = 0
+$$
+
+And because of first equation in Navier-Stokes
+$$
+ \Div u = 0 \implies \dfrac{D\rho}{Dt} = 0
+$$
+
+This means that along the trajectory $\rho$ is constant. So, in our
+case, we also assume that $\rho = const$.
+$$
+    \rho = \rho_0 \in \mathbb{R} \implies \dfrac{D\rho}{Dt} = 0
+$$
+
+From Navier-Stokes we can write:
+\begin{itemize}
+    \item $\Div u = 0$
+    \item 3 equations for $u$
+    \item energy
+\end{itemize}
+
+So, consider second equation from Navier-Stokes. Now, $b = 0$, $\rho = const$
+and applying divergence operator we get
+$$
+    \rho(\partial_t u + u\nabla u) + \nabla p = \mu\Delta u + 
+    (\lambda + \mu)\nabla\Div u + b\rho
+$$
+$$
+    -\Delta  p = \Div(u\nabla u) = \sum_{i,j=1}^{3}\partial_{ij}(u_j u_i)
+$$
+
+Under assumptions $r=b=0$ (means we don't have external forces).
+
+\begin{remark}
+    p can be used as a Lagrange multiplier
+\end{remark}
+
+$$
+    \begin{cases}
+        -\Delta u + \nabla p = f\\
+        \Div u = 0
+    \end{cases}
+    \Leftrightarrow
+    \inf_{\Div u = 0} \left( \vert\vert \nabla u \vert\vert_{i}\: - <f_i,u> \right)
+$$
+
+At the end of the day:
+$$
+    \begin{cases}
+        \Div u = 0 \\
+        \partial_t u + u \nabla u + \nabla p = \mu\Delta u + b\\
+        \partial_t e + u \nabla e = \kappa\Delta T + 2\mu\Tr(D^2) + r
+    \end{cases}
+$$
+
+And in Euiler fluids, because of no viscousity, equivalently obtain:
+$$
+    \begin{cases}
+        \Div u = 0 \\
+        \partial_t u + u \nabla u + \nabla p = b\\
+        \partial_t e + u \nabla e = r
+    \end{cases}
+$$
+
+\begin{remark}
+    Incompressibility is not an absolute property of a fluid.
+\end{remark}
+
+\section{Boundary condition}
+$\Omega \subseteq \mathbb{R}^3$, $\Omega = \Omega(t)$ is called
+free boundary problem (boundary depends on time). In our study
+we consider $\Omega$ fixed:\\
+
+\begin{enumerate}
+    \item $\Omega = \mathbb{R}^3$
+    \item $\Omega = \mathbb{T}^3$ \text{(torus)} (our domain is periodic
+    and periodic means $f(t,x) =f(t,x+L)\quad\forall L$)
+    \item $\Omega \subset \mathbb{R}^3$
+\end{enumerate}
+
+By $\partial\omega$ we denote the boundary of $\omega$.
+$$
+    u\vert_{\partial\omega} = u_B
+$$
+$$
+    u\vert_{\partial\omega = 0} (\implies u_B = 0)
+    \text{ - impermeable domain (we can not exit from $\omega$)}
+$$
+
+This $u\vert_{\partial\omega} = 0$ called no slip boundary condition;
+ the fluid is adherent to the boundary of $\omega$.
+
+Note that we also assign density on the boundary
+
+$$
+    \rho\vert_{\partial\omega} = \rho_B
+$$
+
+We want to relax no slip condition. For Euler Fluid the conditions
+in the following $u*n\vert_{\partial\omega} = 0$ (means vector field
+is orthogonal to the other normal vectors to the surface).
+
+For viscous fluids we impose the following \textbf{Navier's slip condition}
+$$
+    \beta u_\tau + \left[ \mathbb{S}\cdot n \right]_\tau = 0,\quad
+    \text{where $\beta = const > 0$}
+$$
+
+If we remember Stokes law: $\lambda = -\frac{2}{3}\mu$ ($\mu$ is viscousity)
+$$
+    \mathbb{S} = \mu(\Div u + \Div u^{T})-\dfrac{2\mu}{3}\Div u\Id
+$$
+$$
+    N = 2\mu\left( D - \dfrac{1}{3}\Div u\Id \right) 
+$$
+
+$n - $ normal vetor and $\tau - $ tangent vector to $\partial\omega\implies$:
+$$
+    u_\tau = u\cdot\tau
+$$ 
+$$
+    \left[\mathbb{S}\cdot n\right]_\tau = 
+    \left(\mathbb{S}\cdot n\right)\tau
+$$
+\end{document}
