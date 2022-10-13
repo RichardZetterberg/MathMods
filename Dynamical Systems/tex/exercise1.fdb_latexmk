@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1665660962 "e:/MathMods/Dynamical Systems/tex/exercise1.tex" "exercise1.pdf" "exercise1" 1665660963
+["pdflatex"] 1665662608 "e:/MathMods/Dynamical Systems/tex/exercise1.tex" "exercise1.pdf" "exercise1" 1665662610
   "C:/Users/ddmit/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1665513698 88822 6e2018c1c62a3ff7c989558b03ea16cf ""
   "C:/Users/ddmit/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1636938109 14064 37afac0d95d827a2d9edcb7ac9287163 ""
   "C:/Users/ddmit/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1665610911 10788011 51ce451ea637aa1e97b518802331bf9c ""
@@ -59,9 +59,9 @@
   "C:/Users/ddmit/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/ddmit/AppData/Roaming/MiKTeX/tex/latex/geometry/geometry.cfg" 1578057145 1104 7ac475a4e3466b0b43e138e9356bda83 ""
   "C:/Users/ddmit/AppData/Roaming/MiKTeX/tex/latex/geometry/geometry.sty" 1578057145 42759 9cf6c5257b1bc7af01a58859749dd37a ""
-  "e:/MathMods/Dynamical Systems/tex/exercise1.tex" 1665660961 14135 f2d7957ba32ca88e844902e39f36308a ""
-  "exercise1.aux" 1665660963 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
-  "exercise1.tex" 1665660961 14135 f2d7957ba32ca88e844902e39f36308a ""
+  "e:/MathMods/Dynamical Systems/tex/exercise1.tex" 1665662607 14133 707a1d6301a9ccbc2c843803d32d7fd8 ""
+  "exercise1.aux" 1665662609 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
+  "exercise1.tex" 1665662607 14133 707a1d6301a9ccbc2c843803d32d7fd8 ""
   "images//plot1.png" 1665611291 14819 6d5f7a1a62913d4c19da99e8992c6e97 ""
   "images//plot2.png" 1665637668 43299 81160302efbd72a843d973f66a27f76e ""
   "images//plot3.png" 1665660325 60657 d95435870cdcc50b96230ec93e1a3dea ""
